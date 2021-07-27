@@ -7,6 +7,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.5.1
 	github.com/alessio/shellescape v1.2.2
 	github.com/andybalholm/cascadia v1.2.0 // indirect
+	github.com/asciimoo/wuzz v0.5.0
 	github.com/jroimartin/gocui v0.4.0
 	github.com/mattn/go-colorable v0.1.6 // indirect
 	github.com/mattn/go-runewidth v0.0.9
