@@ -1,4 +1,4 @@
-module github.com/asciimoo/wuzz
+module github.com/Ryo-not-rio/wuzz
 
 go 1.14
 
