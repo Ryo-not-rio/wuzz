@@ -24,11 +24,18 @@ jobs:
       - name: Build
         run: go build -v ./...
 
-      - name: publish code coverage
+      - name: Test
+        run: go test -v ./... -coverprofile=c.out
+
+      - name: publish to code climate
         uses: paambaati/codeclimate-action@v2.7.5
         env:
           CC_TEST_REPORTER_ID: ${{ env.cc_id }}
         with:
-          coverageCommand: go test -v ./... -coverprofile=c.out
           debug: true
           prefix: github.com/Ryo-not-rio/wuzz
+
+      - name: publish to code cov
+        uses: codecov/codecov-action@v2
+        with:
+          files: ./c.out
